@@ -17,7 +17,8 @@
  * @returns {string} John Smith
  */
 export const createFullName = (firstName, lastName) => {
-  /* Write your code here */
+      const fullName = firstName + " " + lastName;
+      return fullName
 };
 
 /**
@@ -28,8 +29,14 @@ export const createFullName = (firstName, lastName) => {
  * @param {number} number2 200
  * @returns {number} 100
  */
-export const findSmallestNumber = (/* Write the parameters here */) => {
-  /* Write your code here */
+export const findSmallestNumber = (number1, number2) => {
+    let smallestNumber;
+    if(number1<number2){
+      smallestNumber = number1;
+    } else{
+      smallestNumber = number2;
+    }
+    return smallestNumber;
 };
 
 /**
@@ -40,8 +47,8 @@ export const findSmallestNumber = (/* Write the parameters here */) => {
  * @param {number} number2 6
  * @returns {number} 18
  */
-export const multiplyNumbers = (/* Write the parameters here */) => {
-  /* Write your code here */
+export const multiplyNumbers = (number1, number2) => {
+    return number1 * number2;
 };
 
 /* Intermediate Challenges */
@@ -57,7 +64,13 @@ export const multiplyNumbers = (/* Write the parameters here */) => {
  * @returns {string} "You got a new high score!" | "So close!" | "Better luck next time!"
  */
 export const checkIfNewHighScore = (score, highScore) => {
-  /* Write your code here */
+      if(score > highScore) {
+        return "You got a new high score!"
+      } else if (score === highScore){
+        return "So close!"
+      } else {
+        return "Better luck next time!"
+      }
 };
 
 /**
@@ -67,7 +80,8 @@ export const checkIfNewHighScore = (score, highScore) => {
  * @returns {string} "15 degrees celsius is 59 degrees fahrenheit"
  */
 export const celsiusToFahrenheit = (tempInCelsius) => {
-  /* Write your code here */
+  let tempInFarenheit = (tempInCelsius * 9/5) + 32;
+  return `${tempInCelsius} degrees celsius is ${tempInFarenheit} degrees fahrenheit`;
 };
 
 /**
@@ -80,7 +94,9 @@ export const celsiusToFahrenheit = (tempInCelsius) => {
  * @returns {number} 47450
  */
 export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
-  /* Write your code here */
+    let yearsLeft = maxAge - age;
+    let daysLeft = yearsLeft * 365;
+    return daysLeft * snickersPerDay;
 };
 
 /* Advanced Challenges */
@@ -90,7 +106,7 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
  * If the score is:
  *  100 - 80: "A"
  *  79 - 70: "B"
- *  79 - 60: "C"
+ *  69 - 60: "C"
  *  59 - 50: "D"
  *  49 - 40: "E"
  *  39 - 0: "F"
@@ -100,9 +116,25 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
  * @returns {string} A - F | Score unavailable
  */
 export const getGrade = (score) => {
-  /* Write your code here */
-};
-
+    let text;
+    if (score < 0 || score > 100) {
+      text = "Score unavailable";
+    } else if (typeof score != "number"){
+      text = "Score unavailable";
+    } else if (score >= 80 && score <= 100){
+      text = "A";
+    } else if(score >= 70 && score <= 79){
+      text = "B";
+    } else if (score >= 60 && score <= 69){
+      text = "C";
+    } else if (score >= 50 && score <= 59){
+      text = "D";
+    } else if (score >= 40 && score <= 50){
+      text = "E";
+    } else if (score <= 39  && score >= 0) {
+      text = "F"
+    } return text 
+  }
 /**
  * A function that find the area of a circle to 2 decimal places.
  *
@@ -110,7 +142,8 @@ export const getGrade = (score) => {
  * @returns {number} 28.27
  */
 export const calculateAreaOfCirlce = (radius) => {
-  /* Write your code here */
+  let number = 3.14 * (radius**2)
+  return Math.round( number * 100 ) / 100
 };
 
 /* Expert Challenge */
@@ -131,5 +164,20 @@ export const calculateAreaOfCirlce = (radius) => {
  * @param {string} name John
  */
 export const getStudentSummary = (score, name) => {
-  /* Write your code here */
+   let newScore = getGrade(score);
+   if (newScore == "A") {
+     console.log(`Congratulations ${name}! You achieved a grade of A`);
+   } else if (newScore == "B"){
+      console.log(`Well done ${name}! You achieved a grade of B.`)
+   } else if (newScore == "C"){
+     console.log(`Nicely done ${name}. You achieved a grade of C`)
+   } else if (newScore == "D") {
+     console.log(`That's okay ${name}. You achieved a grade of D`)
+   } else if (newScore == "E"){
+     console.log(`Too bad ${name}. You achieved a grade of E`)
+   } else if (newScore == "F"){
+     console.log(`Sorry ${name}. You achieved a grade of F. There's always a next year.`)
+   } else if (newScore == "Score unavailable") {
+     console.log(`My apologies ${name}, there's been an error in processing your grade.`)
+   }
 };

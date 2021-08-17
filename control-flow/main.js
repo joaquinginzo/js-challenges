@@ -27,7 +27,7 @@ if (!counter) {
 // Where they input there grade and find out percentages
 // Grading system (A - E)
 
-let grade = "A";
+/*let grade = "A";
 // This will get changed inside the switch case
 let percentage;
 
@@ -49,7 +49,27 @@ switch (grade) {
         break;
 }
 
-console.log(percentage);
+console.log(percentage); */
+
+const nameTagOption = "Timothy";
+
+let isValid;
+
+const getIsValidOnNameTag = () => {
+    if (nameTagOption.lenght <= 8 && nameTagOption[0] === nameTagOption[0].toUpperCase()){
+        isValid = true;
+    }else{
+        isValid = false;
+    }
+};
+
+getIsValidOnNameTag();
+
+console.log(isValid)
+
+
+
+
 
 
 

@@ -1,3 +1,7 @@
+"use strict";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 /* This challenge is designed to test you knowledge of Types and Control Flow (If and Switch Statements) */
 
 /* 
@@ -15,45 +19,45 @@
  *
  * @returns {string} John Smith
  */
-const firstName = "John";
-const lastName = "Smith";
+var firstName = "John";
+var lastName = "Smith";
 
-export const createFullName = () => {
-    const fullName = firstName + " " + lastName;
-    return fullName;
+var createFullName = function createFullName() {
+  var fullName = firstName + " " + lastName;
+  return fullName;
 };
-
 /**
  * A function that programmatically returns the largest number.
  * This means if the numbers were different it would still return the largest one.
  *
  * @returns {number} the largest number
  */
-const largeNumber1 = 100;
-const largeNumber2 = 200;
 
-export const findLargestNumber = () => {
-  if(largeNumber1 > largeNumber2){
-    return largeNumber1
+
+var largeNumber1 = 100;
+var largeNumber2 = 200;
+
+var findLargestNumber = function findLargestNumber() {
+  if (largeNumber1 > largeNumber2) {
+    return largeNumber1;
   } else {
-    return largeNumber2
+    return largeNumber2;
   }
 };
-
 /**
  * A function that programmatically adds two numbers together.
  * This means if the numbers were different it would still add them together.
  *
  * @returns {number} the sum of both numbers
  */
-const addNumber1 = 12;
-const addNumber2 = 24;
 
-export const addNumbers = () => {
-  const addNumbers = addNumber1 + addNumber2;
-  return addNumbers;
+
+var addNumber1 = 12;
+var addNumber2 = 24;
+
+var addNumbers = function addNumbers() {
+  var addNumbers = addNumber1 + addNumber2;
 };
-
 /* Intermediate Challenges */
 
 /**
@@ -62,13 +66,14 @@ export const addNumbers = () => {
  *
  * @returns {number} the length of the string
  */
-const password = "thisIsMyVeryLongPassword123456789";
 
-export const findLengthOfPassword = () => {
-  const stringLenght = password.length;
+
+var password = "thisIsMyVeryLongPassword123456789";
+
+var findLengthOfPassword = function findLengthOfPassword() {
+  var stringLenght = password.length;
   return stringLenght;
 };
-
 /**
  * A function that programmatically tells you what the type of the variable is.
  * This variable was still one of the accepted types it would still output a string.
@@ -79,13 +84,15 @@ export const findLengthOfPassword = () => {
  *
  * @returns {string} This is a string
  */
-const thing = "I am a thing";
 
-export const findType = () => {
-  let whatType = typeof(thing);
+
+var thing = "I am a thing";
+
+var findType = function findType() {
+  var whatType = _typeof(thing);
+
   return whatType;
 };
-
 /**
  * A function to programmatically decide if a name is suitable for a name tag.
  * This means it must still work even if the name is different and return something if name provided is incorrect.
@@ -93,20 +100,21 @@ export const findType = () => {
  *
  * @returns {boolean} true || false
  */
-const nameTagOption = "Timothy";
 
-export const getIsValidOnNameTag = () => {
-  let isValid;
-  if (nameTagOption.length <= 8 && nameTagOption[0] == nameTagOption[0].toUpperCase()){
-      isValid = true;
-  }else{
-      isValid = false;
+
+var nameTagOption = "Timothy";
+var isValid;
+
+var getIsValidOnNameTag = function getIsValidOnNameTag() {
+  if (nameTagOption.lenght <= 8 && nameTagOption[0] == nameTagOption[0].toUpperCase()) {
+    isValid = true;
+  } else {
+    isValid = false;
   }
-  return isValid;
-  console.log(isValid);
 };
 
-
+getIsValidOnNameTag();
+console.log(isValid);
 /* Advanced Challenges */
 
 /**
@@ -115,13 +123,14 @@ export const getIsValidOnNameTag = () => {
  *
  * @returns {number} The number converted from the string "32.87" -> 32.87
  */
-const stringToConvert = "14.45";
-let whatType = typeof(stringToConvert);
 
-export const convertStringToNumber = () => {
-  let whatType = string;
+var stringToConvert = "14.45";
+
+var whatType = _typeof(stringToConvert);
+
+var convertStringToNumber = function convertStringToNumber() {
+  var whatType = string;
 };
-
 /**
  * A function that uses regex to programmatically test if a string contains uppercase letters.
  * This means if the string was different it would still accurately return true or false.
@@ -130,11 +139,12 @@ export const convertStringToNumber = () => {
  *
  * @returns {boolean} true || false
  */
-const stringWithUppercaseLetters = "I Am A String With Uppercase Letters";
-export const getHasUppercaseLetters = () => {
-  // Write your code here
-};
 
+
+var stringWithUppercaseLetters = "I Am A String With Uppercase Letters";
+
+var getHasUppercaseLetters = function getHasUppercaseLetters() {// Write your code here
+};
 /* Expert Challenge */
 
 /**
@@ -143,8 +153,9 @@ export const getHasUppercaseLetters = () => {
  *
  * @returns {string} i_want_to_be_snake_case
  */
-const pascalCaseVariableName = "IWantToBeSnakeCase";
 
-export const convertPascalCaseToSnakeCase = () => {
-  // Write your code here
+
+var pascalCaseVariableName = "IWantToBeSnakeCase";
+
+var convertPascalCaseToSnakeCase = function convertPascalCaseToSnakeCase() {// Write your code here
 };
