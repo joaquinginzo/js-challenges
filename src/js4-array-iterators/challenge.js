@@ -23,7 +23,7 @@
 
 export const removeFalseValues = (booleanArr) => {
   const trueValues = booleanArr.filter((boolean) => boolean);
-  return trueValues;
+  return trueValues;}
 
 /**
  * A function that takes an array of numbers that are between 0 - 1.
@@ -76,7 +76,6 @@ export const createListOfPoessessions = (possessionsArr, name) => {
 export const convertStringToNumbersArray = (numberString) => {
   const newList = numberString.split("+");
   return newList.map(number => Number(number));
- 
 };
 
 /**
@@ -182,6 +181,4 @@ export const formatString = (string) => {
  * @return {string[]} [ "Fizz", "Buzz", "FizzBuzz", "2" ]
  */
 
-export const fizzBuzz = (mixedArray) => {
-  return;
-};
+
