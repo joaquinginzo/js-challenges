@@ -21,7 +21,7 @@
  * @return {boolean[]} [true, true, true]
  */
 
- export const removeFalseValues = (booleanArr) => {
+export const removeFalseValues = (booleanArr) => {
   const trueValues = booleanArr.filter((boolean) => boolean);
   return trueValues;
 
