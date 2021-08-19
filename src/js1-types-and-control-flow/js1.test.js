@@ -42,17 +42,17 @@ test("getIsValidOnNameTag() tests", () => {
   expect(getIsValidOnNameTag()).toBe(true);
 });
 
-test("convertStringToNumber() tests", () => {
+xtest("convertStringToNumber() tests", () => {
   expect(convertStringToNumber()).toBeDefined();
   expect(convertStringToNumber()).toBe(14.45);
 });
 
-test("getHasUppercaseLetters() tests", () => {
+xtest("getHasUppercaseLetters() tests", () => {
   expect(getHasUppercaseLetters()).toBeDefined();
   expect(getHasUppercaseLetters()).toBe(true);
 });
 
-test("convertPascalCaseToSnakeCase() tests", () => {
+xtest("convertPascalCaseToSnakeCase() tests", () => {
   expect(convertPascalCaseToSnakeCase()).toBeDefined();
   expect(convertPascalCaseToSnakeCase()).toBe("i_want_to_be_snake_case");
 });

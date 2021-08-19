@@ -22,7 +22,11 @@
  */
 
 export const createRecipeString = (ingredientsArr) => {
-  return;
+    let recipeString = ""
+    for (let index = 0; index < ingredientsArr.length; index++) {
+      recipeString += `${ingredientsArr[index]}+`; 
+    }
+  return recipeString.substring(0,recipeString.length -1);
 };
 
 /**
@@ -33,7 +37,14 @@ export const createRecipeString = (ingredientsArr) => {
  */
 
 export const getFirstAndLastItems = (itemsArr) => {
-  return;
+  let newArr = [];
+  for (let index = 0; index < itemsArr.length; index++) {
+    let string = itemsArr[index]
+    if(string === itemsArr[0] || string === itemsArr[itemsArr.lenght]){
+      newArr.push(string)
+    }
+  }
+  return newArr;
 };
 
 /**
@@ -44,7 +55,11 @@ export const getFirstAndLastItems = (itemsArr) => {
  */
 
 export const totalScores = (scoreArr) => {
-  return;
+  let finalScore = 0;
+  for (let index = 0; index < scoreArr.length; index++) {
+    finalScore += scoreArr[index];  
+  }
+  return finalScore;
 };
 
 /**
@@ -60,7 +75,11 @@ export const totalScores = (scoreArr) => {
  */
 
 export const totalRange = (rangeMax) => {
-  return;
+  let total = 0;
+  for (let index = 0; index <= rangeMax; index++) {
+    total += index;
+  }
+  return total;
 };
 
 /**
@@ -89,7 +108,13 @@ export const moveFirstAndLastItems = (itemsArr) => {
  */
 
 export const removeEvenNumbers = (numberArr) => {
-  return;
+  const newArr=[];
+  for (let index = 0; index < numberArr.length; index++) {
+    if (numberArr[index]%2!=0){
+      newArr.push(numberArr[index])
+    }
+  }
+  return newArr;
 };
 
 /**
@@ -105,7 +130,11 @@ export const removeEvenNumbers = (numberArr) => {
  */
 
 export const generateAverage = (numberArr) => {
-  return;
+  let sum = 0;
+  for (let index = 0; index < numberArr.length; index++) {
+    sum += numberArr[index];  
+  }
+  return Math.round(sum/numberArr.lenght);
 };
 
 /**

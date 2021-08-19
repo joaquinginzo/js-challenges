@@ -21,9 +21,9 @@
  * @return {boolean[]} [true, true, true]
  */
 
-export const removeFalseValues = (booleanArr) => {
-  return;
-};
+ export const removeFalseValues = (booleanArr) => {
+  const trueValues = booleanArr.filter((boolean) => boolean);
+  return trueValues;
 
 /**
  * A function that takes an array of numbers that are between 0 - 1.
@@ -34,7 +34,8 @@ export const removeFalseValues = (booleanArr) => {
  */
 
 export const createPercentageList = (numbersArr) => {
-  return;
+  const newList = numbersArr.map(number => `${number*100}%`)
+  return newList;
 };
 
 /**
@@ -47,7 +48,8 @@ export const createPercentageList = (numbersArr) => {
  */
 
 export const createListOfPoessessions = (possessionsArr, name) => {
-  return;
+  const newList2 = possessionsArr.map(possesion =>name + " " + possesion)
+  return newList2;
 };
 
 /**
@@ -72,7 +74,9 @@ export const createListOfPoessessions = (possessionsArr, name) => {
  */
 
 export const convertStringToNumbersArray = (numberString) => {
-  return;
+  const newList = numberString.split("+");
+  return newList.map(number => Number(number));
+ 
 };
 
 /**
@@ -84,7 +88,16 @@ export const convertStringToNumbersArray = (numberString) => {
  */
 
 export const createOddEvenArray = (numberString) => {
-  return;
+  const newList = numberString.split("+");
+  const newListNumbers = newList.map(number=> Number(number));
+  const oddNumbersArr = newListNumbers.map((number) => {
+    if (number%2 === 0){
+      return "odd"
+    } else {
+      return "even"
+    }
+  })
+  return oddNumbersArr;
 };
 
 /**

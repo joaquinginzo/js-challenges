@@ -164,7 +164,7 @@ describe("calculateAreaOfCircle() tests", () => {
   });
 });
 
-describe("getStudentSummary() tests", () => {
+xdescribe("getStudentSummary() tests", () => {
   it("Should have a return", () => {
     expect(getStudentSummary(70, "John")).toBeDefined();
   });

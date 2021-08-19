@@ -82,7 +82,7 @@ export const findLengthOfPassword = () => {
 const thing = "I am a thing";
 
 export const findType = () => {
-  let whatType = typeof(thing);
+  let whatType = "This is a " + typeof(thing);
   return whatType;
 };
 
